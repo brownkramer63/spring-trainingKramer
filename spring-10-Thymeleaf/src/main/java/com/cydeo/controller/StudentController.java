@@ -17,9 +17,10 @@ public class StudentController {
         return "student/register";
     }
 
-    @RequestMapping("/drop") //localhost:8080/student/drop
+
+    @RequestMapping("/welcome") //localhost:8080/student/drop
     public String drop(){
 
-        return "student/register";
+        return "student/welcome";
     }
 }
