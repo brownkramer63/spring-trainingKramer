@@ -21,9 +21,15 @@
 </h2>
 
 <h2>
-    <a th:href="@{/student/welcome}">Welcome</a>
+    <a th:href="@{/student/welcome(name=${students.get(0).firstName})}">Welcome</a>
 </h2>
 
+<!--adding parameter in link-->
+
+<ul>
+    <li th:each=" name: ${studenst}">apple</li>
+
+</ul>
 
 </body>
 </html>
