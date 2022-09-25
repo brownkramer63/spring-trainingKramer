@@ -20,23 +20,23 @@
 <a th:href="@{https://cydeo.com}">Cydeo Page</a>
 </h2>
 
+
+
 <h2>
-    <a th:href="@{/student/welcome(name=${students.get(0).firstName})}">Welcome</a>
+    <a th:href="@{/student/welcome}">Welcome</a>
 </h2>
 
 <!--adding parameter in link-->
-<h2>printing Student first name</h2>
-<ul>
-    <li th:each=" student: ${students} " th:text="${student.firstName}">apple</li>
 
-</ul>
+<h2>
+    <a th:href="@{/student/welcome(id=3)}">Link1</a>
+</h2>
 
-<h2>printing Student last name</h2>
-<ul>
-    <li th:each=" student: ${students} " th:text="${student.lastName}">apple</li>
+<h2>
+    <a th:href="@{/student/welcome(name=${students.get(0).firstName})}">Link</a>
+</h2>
 
-</ul>
 
-<h2>print</h2>
+
 </body>
 </html>
