@@ -34,6 +34,7 @@ public String submitForm(@ModelAttribute("mentor") Mentor mentor){
 
 
 //if we wanted it to just return rempty page : return mentor/mentor-register
+     //to add object still model.addAttribute("mentor", new mentor())
         return "mentor/mentor-confirmation";
 
 }
