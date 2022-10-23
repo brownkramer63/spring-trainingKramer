@@ -1,5 +1,7 @@
 package com.cydeo.entity;
 
+import com.cydeo.enums.Gender;
+
 import javax.persistence.*;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -25,7 +27,7 @@ private String email;
     private LocalTime birthTime;
     @Column(columnDefinition = "TIMESTAMP")
     private LocalDateTime birthDateTime;
-
-
+@Enumerated(EnumType.STRING)
+private Gender gender;
 
 }
