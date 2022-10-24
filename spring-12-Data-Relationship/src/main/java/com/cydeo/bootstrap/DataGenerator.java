@@ -38,6 +38,9 @@ private final PaymentRepository paymentRepository;
 
        paymentRepository.save(payment1);
        paymentRepository.save(payment2);
+        System.out.println(paymentRepository.findById(2L).get().getPaymentDetail());
+
+        paymentRepository.delete(payment1);
 
 
 

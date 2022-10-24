@@ -26,7 +26,7 @@ public class Payment {
     @Enumerated(EnumType.STRING)
     private Status paymentStatus;
 
-    @OneToOne(cascade = CascadeType.ALL)
+    @OneToOne(cascade = {CascadeType.PERSIST,CascadeType.MERGE})
     @JoinColumn(name = "payment_detail_id")//we can name it our it will default to payment_detail
     private PaymentDetail paymentDetail;
 
