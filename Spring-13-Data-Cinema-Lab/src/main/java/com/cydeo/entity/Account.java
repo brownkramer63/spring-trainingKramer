@@ -22,6 +22,6 @@ public class Account extends BaseEntity {
     @Enumerated(EnumType.STRING)
     private UserRole userRole;
 
-    @OneToOne(mappedBy = "account")
+    @OneToOne(mappedBy = "account") //to avoid multiple foriegn keys
     private User user;
 }
