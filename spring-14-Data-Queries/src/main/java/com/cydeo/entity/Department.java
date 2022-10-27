@@ -8,10 +8,11 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name="departments")
+@Table(name = "departments")
 @NoArgsConstructor
 @Data
 public class Department {
+
     @Id
     private String department;
     private String division;
