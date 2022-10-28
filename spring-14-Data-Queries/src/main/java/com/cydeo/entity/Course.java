@@ -14,12 +14,12 @@ public class Course{
 @GeneratedValue(strategy = GenerationType.IDENTITY)
 private Long Id;
 @Column(name = "NAME")
-    private String Name;
+    private String name;
 @Column(name = "CATEGORY")
-    private String Category;
+    private String category;
 @Column(name = "RATING")
-    private int Rating;
+    private int rating;
 @Column(name = "DESCRIPTION")
-    private String Description;
+    private String description;
 
 }

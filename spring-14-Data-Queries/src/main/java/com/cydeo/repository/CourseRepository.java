@@ -7,21 +7,20 @@ import java.util.List;
 import java.util.stream.Stream;
 
 public interface CourseRepository extends JpaRepository<Course,Long> {
+    //Find all courses by category
+    List<Course>  findByCategory(String category);
 
-    //find all course by category
-    List<Course> findByCategory(String category);
-
-    //find all course by category and order the entities by name
+    //Find all courses by category and order the entities by name
     List<Course> findByCategoryOrderByName(String category);
 
-    //check if a course with the supplied name exists. REurn true if exists, false otherwise
+    //Checks if a course with the supplied name exists. Return true if exists, false otherwise
     boolean existsByName(String name);
 
-    //returns the count of course for the given category
-    Integer countByCategory(String category);
+    //Returns the count of courses for the given category
+    int countByCategory(String category);
 
-    //Find all the course that start with the given course name string
-    List<Course> findCourseByNameIsStartingWith(String name);
+    //Finds all the courses that start with the given course name string
+    List<Course> findByNameStartingWith(String name);
 
     //Find all courses by category and returns a stream
     Stream<Course> streamAllByCategory(String category);
