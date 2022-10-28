@@ -77,4 +77,9 @@ public interface EmployeeRepository extends JpaRepository<Employee, Integer> {
     List<Employee> retrieveEmployeeHireDateBefore(LocalDate date);
 
 
+    //sorting in asc order
+    @Query("select  e from Employee e order by e.salary asc ")
+    List<Employee> retrieveEmployeeSalaryOrderAsc();
+
+
 }
