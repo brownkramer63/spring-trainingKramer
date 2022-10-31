@@ -2,12 +2,16 @@ package com.cydeo.entity;
 
 import com.cydeo.enums.UserRole;
 import lombok.Data;
+import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 import javax.persistence.*;
 
 @Entity
-@Data
+//@Data
+@Getter
+@Setter
 @NoArgsConstructor
 @Table(name = "account_details")
 public class Account extends BaseEntity {
