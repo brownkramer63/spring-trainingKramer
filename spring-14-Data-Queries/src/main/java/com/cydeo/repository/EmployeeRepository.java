@@ -3,6 +3,7 @@ package com.cydeo.repository;
 import com.cydeo.entity.Employee;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
@@ -80,6 +81,10 @@ public interface EmployeeRepository extends JpaRepository<Employee, Integer> {
     //sorting in asc order
     @Query("select  e from Employee e order by e.salary asc ")
     List<Employee> retrieveEmployeeSalaryOrderAsc();
+
+    //named parameter
+    @Query("SELECT  e from Employee e where e.salary= :salary")
+    List<Employee> retrieveEmployeeSalary(@Param("salary") int salary);
 
 
 }
