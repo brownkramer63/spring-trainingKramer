@@ -29,7 +29,7 @@ private final String URI="https://jsonplaceholder.typicode.com/users";
  @GetMapping("{id}")
  public Object readUser(@PathVariable("id") Integer id){
 
-        String URL = URI+ "/id";
+        String URL = URI+ "/{id}";
         return restTemplate.getForObject(URL,Object.class,id);
 
 
