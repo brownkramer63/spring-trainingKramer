@@ -10,7 +10,16 @@ import java.util.List;
 @RestController
 @RequestMapping("/courses/api/v1")
 public class CourseController {
+    private final CourseService courseService;
 
+    public CourseController(CourseService courseService) {
+        this.courseService = courseService;
+    }
+
+    @GetMapping
+public List<CourseDTO> getAllCourses(){
+    return courseService.getCourses();
+}
 
 
 
