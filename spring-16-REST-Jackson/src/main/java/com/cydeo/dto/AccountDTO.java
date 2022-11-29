@@ -1,10 +1,13 @@
 package com.cydeo.dto;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import lombok.*;
 
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
+@JsonIgnoreProperties(value = {"address", "country", "state"})
 public class AccountDTO {
 
     private String name;
@@ -14,6 +17,7 @@ public class AccountDTO {
     private String city;
     private Integer age;
     private String postalCode;
+    @JsonBackReference
     private UserDTO user;
 
 }
