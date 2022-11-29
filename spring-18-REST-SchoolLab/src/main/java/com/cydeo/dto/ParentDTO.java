@@ -16,6 +16,7 @@ import java.time.LocalDate;
 @JsonIgnoreProperties(ignoreUnknown = true)
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class ParentDTO {
+
     @JsonIgnore
     private Long id;
 
@@ -25,8 +26,9 @@ public class ParentDTO {
     private String phoneNumber;
 
     private String email;
-    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private String username;
+
+    @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private String password;
 
     private LocalDate birthday;

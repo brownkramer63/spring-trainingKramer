@@ -17,6 +17,7 @@ import java.time.LocalDate;
 @JsonIgnoreProperties(ignoreUnknown = true)
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class TeacherDTO {
+
     @JsonIgnore
     private Long id;
 
@@ -26,6 +27,7 @@ public class TeacherDTO {
 
     private String email;
     private String username;
+
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private String password;
 

@@ -29,7 +29,6 @@ public class AddressDTO {
 
     private AddressType addressType;
 
-
     @JsonBackReference(value = "student-address-reference")          // defaultReference
     private StudentDTO student;
 
@@ -39,8 +38,6 @@ public class AddressDTO {
     @JsonBackReference(value = "teacher-address-reference")          // defaultReference
     private TeacherDTO teacher;
 
-    private Integer currentTemperature; //weather information, which we will get later from api from 3rd party
-    //this is not included in entity
-
+    private Integer currentTemperature;     // Weather information, which we will later get it from 3rd party API
 
 }

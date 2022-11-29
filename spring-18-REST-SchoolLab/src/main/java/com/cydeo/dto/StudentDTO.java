@@ -16,6 +16,7 @@ import java.time.LocalDate;
 @JsonIgnoreProperties(ignoreUnknown = true)
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class StudentDTO {
+
     @JsonIgnore
     private Long id;
 
