@@ -21,4 +21,6 @@ public class SchoolController {
         List<TeacherDTO> teachers = teacherService.findAll();
         return teachers;
     }
+
+
 }
