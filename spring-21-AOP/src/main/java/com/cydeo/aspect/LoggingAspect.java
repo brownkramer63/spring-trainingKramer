@@ -12,7 +12,7 @@ import java.util.List;
 
 @Aspect
 @Component
-public class LoggingAspect {
+public class  LoggingAspect {
 
     Logger logger = LoggerFactory.getLogger(LoggingAspect.class);
 
