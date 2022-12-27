@@ -90,5 +90,6 @@ class CalculatorTest {
         assertNotSame(c1, c3);
 
     }
+    //all the fields can be exactly the same as it is only checking if these objects are the same object in the memory
 
 }
