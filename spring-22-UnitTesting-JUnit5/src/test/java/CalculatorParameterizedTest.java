@@ -2,18 +2,20 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.*;
 
-public class CalculatorParameterizedTest {
+public class  CalculatorParameterizedTest {
 
     @ParameterizedTest
     @ValueSource(strings = {"Java", "JS", "TS"})
     void testCase1(String arg) {
         Assertions.assertFalse(arg.isEmpty());
     }
+    //this test will run three times once for each of the strings above
    @ParameterizedTest
    @ValueSource(ints = {3,6,9})
     void testCase2(int num){
        Assertions.assertEquals(0,num% 3);
     }
+    //also will run three times
 
     @ParameterizedTest
     @ValueSource(strings = {"Java", "JS", "TS"})
